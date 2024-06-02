@@ -97,15 +97,6 @@ header h2 {
   height: 100vh;
 }
 
-h1,
-h2,
-h3,
-p {
-  animation: fade linear both;
-  animation-timeline: view();
-  animation-range: entry 50% cover 50%;
-}
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -125,9 +116,10 @@ p {
 }
 
 .hero h1,
-.hero p {
+.hero blockquote {
   max-width: 60%;
   margin: 0 auto;
+  animation: fade 1s;
 }
 
 h1 {
