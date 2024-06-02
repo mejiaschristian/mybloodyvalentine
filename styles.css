@@ -1,0 +1,342 @@
+@import url("https://fonts.cdnfonts.com/css/itc-kabel-std");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "ITC Kabel Std", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btt {
+  position: fixed;
+  right: -50px;
+  z-index: 9999;
+  border: 1px solid;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffffff5e;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btt a {
+  color: #000000;
+}
+
+.btt.show {
+  bottom: 20px;
+  right: 20px;
+}
+
+header {
+  position: fixed;
+  top: -100px; /* Hide header initially */
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2c2cb4;
+  box-shadow: 0px 0px 2px 0px;
+  z-index: 3;
+  user-select: none;
+  display: flex;
+  transition: top 0.3s ease-in-out; /* Add transition effect */
+}
+
+header.show {
+  top: 0; /* Show header when scrolled */
+}
+
+header h2 {
+  color: #ffff;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 10px;
+  border-left: 2px solid #ffff;
+}
+
+.header-nav li {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #ffff;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  border-image: fill 1 linear-gradient(#000000a9, #000000a9);
+}
+
+.hero {
+  color: #ffff;
+  text-align: center;
+  background-image: url(https://miro.medium.com/v2/resize:fit:640/0*nUGOl9Go9XxC5omT.jpeg);
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  place-content: center;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.disclaimer {
+  opacity: 0.2;
+  transition: all 0.3s linear;
+}
+
+.disclaimer:hover {
+  opacity: 0.7;
+}
+
+.hero h1,
+.hero p {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(20px, 5vw, 50px);
+  font-weight: 700;
+}
+
+h2 {
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  padding: 5px;
+  line-height: 2rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+}
+
+i {
+  padding: 10px;
+}
+
+a {
+  padding: 5px;
+  text-decoration: none;
+  color: #ffff;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 3px #ffff;
+}
+
+.hero2 {
+  background-color: #f5f5f5;
+  padding-bottom: 100px;
+}
+
+.hero2-content {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.member-container,
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.member,
+.album {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 2%;
+  background-color: #fdfdfd00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+
+.member:hover,
+.album:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.member p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.album {
+  height: auto;
+}
+
+.album img {
+  width: 100%;
+  object-fit: fill;
+}
+
+.hero3 {
+  color: #ffff;
+  text-align: center;
+  background-image: url(https://www.uncut.co.uk/wp-content/uploads/2021/03/PR_My_Bloody_Valentine-Paul-Rider-4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  place-content: center;
+  height: 100vh;
+}
+
+.album-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2%;
+}
+
+.album-container-2 .album {
+  margin: 0;
+  border-radius: 0px;
+}
+
+.album-container-2 .album:hover {
+  transform: none;
+}
+
+.album-desc {
+  height: 100%;
+}
+
+.hero3 h1,
+.hero3 p {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.hero4 {
+  height: 100vh;
+}
+
+footer {
+  padding: 20px;
+  background-color: #2a2a2a;
+  text-align: center;
+  color: #ffff;
+}
+
+.contact-info {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .header-nav ul {
+    border-left: none;
+  }
+  h1 {
+    font-size: clamp(18px, 5vw, 30px);
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: clamp(14px, 1.5vw, 1.15rem);
+    line-height: 1.5rem;
+    max-width: 100%;
+  }
+
+  a {
+    font-size: clamp(14px, 1.5vw, 1.15rem);
+  }
+  .hero4 {
+    padding-bottom: 100px;
+  }
+  .album-container-2 .album {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
